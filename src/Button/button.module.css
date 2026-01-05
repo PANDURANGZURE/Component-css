@@ -1,0 +1,46 @@
+.button {
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+/* Variants */
+.primary {
+  background: black;
+  color: white;
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid black;
+  color: black;
+}
+
+.ghost {
+  background: transparent;
+  color: black;
+}
+
+/* Sizes */
+.sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.md {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+.lg {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+}
+
+/* States */
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
