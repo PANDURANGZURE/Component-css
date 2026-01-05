@@ -3,14 +3,25 @@ import { Button } from './Button'
 import { Input } from './Input'
 
 function App() {
+  let username = 'saurav'
   return (
     <>
-    <Input/>
-    <Input placeholder="Default Input" type="password" />
-    <Input placeholder="Outline Input"variant="outline" />
-    <Input placeholder="Disabled Input"disabled />
-    <Input placeholder="Error Input"error />
-    <Input placeholder="Large Input"size="lg" />
+    <Input
+  label="Username"
+  placeholder="Enter your username"
+  // value={}
+  onChange={(e) => setUsername(e.target.value)}
+  size="md"
+  variant="default"
+  // error={}
+/>
+<Input
+  label="Email"
+  placeholder="Enter your email"
+  size="lg"
+  variant="ghost"
+/>
+
     </>
   )
 }
