@@ -1,0 +1,91 @@
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  z-index: 50;
+}
+
+/* Base modal */
+.modal {
+  background: white;
+  border-radius: 12px;
+  width: min(90vw, 420px);
+  padding: 1.2rem;
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+}
+
+/* Variants */
+.center {
+  text-align: left;
+}
+
+.confirm {
+  text-align: center;
+}
+
+/* Sections */
+.header {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.body {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Animations */
+.scale {
+  animation-name: scaleIn;
+}
+
+.slide {
+  animation-name: slideIn;
+}
+
+.fade {
+  animation-name: fadeIn;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

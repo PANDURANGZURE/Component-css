@@ -8,39 +8,19 @@ import Testing from './page/Testing'
 import { Select } from './Select'
 import { Checkbox } from './Checkbox';
 import { Switch } from './Switch';
+import { Modal } from './Modal';
+import { Toast, toast } from "./Toast";
 
 function App() {
-   const [country, setCountry] = useState("");
-   const [checked, setChecked] = useState(false);
-   const [enabled, setEnabled] = useState(false);
   return (
     <>
-    <Switch
-  label="Notifications"
-  checked={enabled}
-  onChange={(e) => setEnabled(e.target.checked)}
-  size="md"
-  variant="solid"
-  color="#eb8f25ff"
-/>
-<Switch
-  label="Notifications"
-  checked={enabled}
-  onChange={(e) => setEnabled(e.target.checked)}
-  size="md"
-  variant="default"
-  color="#eb8f25ff"
-/>
-<Switch
-  label="Notifications"
-  checked={enabled}
-  onChange={(e) => setEnabled(e.target.checked)}
-  size="md"
-  variant="outline"
-  color="#141312ff"
-/>
+      <Toast varient="" />
+
+      <button onClick={() => toast("Hello Toast")}>
+        Show Toast
+      </button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
