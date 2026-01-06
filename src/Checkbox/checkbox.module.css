@@ -1,0 +1,98 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  --zure-color: black;
+}
+
+.wrapper input {
+  display: none;
+}
+
+/* Base checkbox */
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 0.5px solid var(--zure-color);
+  background: white;
+  transition: all 0.2s ease;
+}
+
+/* Check mark */
+.checkbox::after {
+  content: "";
+  width: 45%;
+  height: 45%;
+  background: var(--zure-color);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.15s ease;
+  
+}
+
+/* Checked */
+.wrapper input:checked + .checkbox::after {
+  opacity: 1;
+  border-radius: 50px;
+  transform: scale(1);
+}
+
+/* ========== VARIANTS ========== */
+
+/* DEFAULT */
+.default {
+  background: white;
+  border: 2px solid var(--zure-color);
+  border-radius: 50px;
+}
+
+/* OUTLINE */
+.outline {
+  background: transparent;
+  border-radius: 50px;
+}
+
+/* SOLID */
+.solid {
+  background: var(--zure-color);
+  border-radius: 50px;
+}
+
+.wrapper input:checked + .solid {
+  background: var(--zure-color);
+}
+
+.wrapper input:checked + .solid::after {
+  background: white;
+}
+
+
+/* Sizes */
+.sm {
+  width: 14px;
+  height: 14px;
+}
+
+.md {
+  width: 18px;
+  height: 18px;
+}
+
+.lg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Label */
+.label {
+  font-size: 0.9rem;
+}
+
+/* Disabled */
+.wrapper input:disabled + .checkbox {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
