@@ -2,23 +2,32 @@ import React from 'react'
 import { Button } from './Button'
 import { Input } from './Input'
 import { Navbar } from './Navbar'
+import { Textarea } from './Textarea'
+import Testing from './page/Testing'
 
 function App() {
   let username = 'saurav'
   return (
     <>
-    <Navbar
-    brand='Saurav Zure'
-    links={[
-    { label: "Home", href: "/" },
-    { label: "Docs", href: "/docs" },
-    { label: "GitHub", href: "#" },
-  ]}
-  sticky
-  varient="blur"
-  textColor='red'
-    />
-    
+    <Textarea
+  label="Feedback"
+  variant="outline"
+  color="purple"
+/>
+    <Testing/>
+
+<Textarea
+  label="Description"
+  variant='ghost'
+  size="lg"
+  resize="none"
+/>
+
+<Textarea
+  label="Error state"
+  error
+/>
+
     </>
   )
 }
