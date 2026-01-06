@@ -43,7 +43,7 @@
 }
 
 .outline {
-  border: 2px solid hsl(var(--primary));
+  border: 1px solid black;
   background: transparent;
 }
 
@@ -51,6 +51,11 @@
   border: none;
   background: transparent;
   box-shadow: none;
+}
+
+.danger {
+  border: 2px solid red;
+  box-shadow: red;
 }
 
 /* Sizes */

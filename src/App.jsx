@@ -7,21 +7,21 @@ function App() {
   return (
     <>
     <Input
-  label="Username"
-  placeholder="Enter your username"
-  // value={}
-  onChange={(e) => setUsername(e.target.value)}
-  size="md"
-  variant="default"
-  // error={}
-/>
-<Input
-  label="Email"
-  placeholder="Enter your email"
-  size="lg"
-  variant="ghost"
-/>
-
+    label='saurav 2'
+    variant='outline'
+    />
+    <Input
+    label='saurav 2'
+    variant='default'
+    />
+    <Input
+    label='saurav 2'
+    variant='ghost'
+    />
+    <Input
+    label='saurav 2'
+    variant='danger'
+    />
     </>
   )
 }
