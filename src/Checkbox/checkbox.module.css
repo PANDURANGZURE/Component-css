@@ -36,7 +36,7 @@
 /* Checked */
 .wrapper input:checked + .checkbox::after {
   opacity: 1;
-  border-radius: 50px;
+  border-radius: 4px;
   transform: scale(1);
 }
 
@@ -46,19 +46,19 @@
 .default {
   background: white;
   border: 2px solid var(--zure-color);
-  border-radius: 50px;
+  border-radius: 4px;
 }
 
 /* OUTLINE */
 .outline {
   background: transparent;
-  border-radius: 50px;
+  border-radius: 4px;
 }
 
 /* SOLID */
 .solid {
   background: var(--zure-color);
-  border-radius: 50px;
+  border-radius: 4px;
 }
 
 .wrapper input:checked + .solid {
