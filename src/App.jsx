@@ -12,25 +12,26 @@ import { Modal } from './Modal';
 import { Toast, toast } from "./Toast";
 import { Loader } from './Loaders';
 import { Skeleton, SkeletonCard, SkeletonText, SkeletonTable } from "./Skeleton";
+import { Badge, BadgeDot, BadgePill } from "./Badge";
 
-function App() {
+export default function App() {
   return (
-    <>
-      <div style={{ padding: "20px", display: "flex", flexDirection: "column", gap: "20px" }}>
-      <h2>Basic Skeleton</h2>
-      <Skeleton width="200px" height="20px" />
+    <div style={{ padding: "20px", display: "flex", flexDirection: "column", gap: "16px" }}>
+      <h2>Basic Badges</h2>
+      <Badge color="red">Error</Badge>
+      <Badge color="green">Success</Badge>
+      <Badge color="blue">Info</Badge>
 
-      <h2>Text Skeleton</h2>
-      <SkeletonText lines={4} />
+      <h2>Dot Badge</h2>
+      <div className="relative">
+        <button style={{ padding: "8px 16px" }}>Messages</button>
+        <BadgeDot size={10} color="red" style={{ position: "absolute", top: 0, right: 0 }} />
+      </div>
 
-      <h2>Card Skeleton</h2>
-      <SkeletonCard />
-
-      <h2>Table Skeleton</h2>
-      <SkeletonTable rows={4} cols={3} />
+      <h2>Pill Badges</h2>
+      <BadgePill color="green">Active</BadgePill>
+      <BadgePill color="red">Inactive</BadgePill>
+      <BadgePill color="yellow">Pending</BadgePill>
     </div>
-    </>
   );
 }
-
-export default App;
