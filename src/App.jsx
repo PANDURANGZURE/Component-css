@@ -6,22 +6,11 @@ function App() {
   let username = 'saurav'
   return (
     <>
-    <Input
-    label='saurav 2'
-    variant='outline'
-    />
-    <Input
-    label='saurav 2'
-    variant='default'
-    />
-    <Input
-    label='saurav 2'
-    variant='ghost'
-    />
-    <Input
-    label='saurav 2'
-    variant='danger'
-    />
+    <Input label="Email" color="#0ea5e9" />
+<Input label="Username" color="purple" variant="outline" />
+<Input label="Search" color="hsl(142 76% 36%)" />
+<Input label="Password" color="red" error />
+
     </>
   )
 }

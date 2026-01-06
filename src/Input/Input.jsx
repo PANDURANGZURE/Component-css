@@ -1,35 +1,35 @@
 import styles from "./input.module.css";
 
 export const Input = ({
+  label,
   value,
   onChange,
-  placeholder = "Enter text",
+  placeholder = " ",
   type = "text",
-  size = "md",          // sm | md | lg
-  variant = "default",  // default | outline | ghost
+  size = "md",
+  variant = "default",
   disabled = false,
   error = false,
+  color = "black",
   className = "",
-  label,
   ...props
 }) => {
   return (
-    <div className={`${styles.wrapper} ${className}`}>
+    <div
+      className={`${styles.wrapper} ${className}`}
+      style={{ "--zure-color": error ? "red" : color }}
+    >
       <input
         type={type}
         value={value}
         onChange={onChange}
-        placeholder=" "
-        className={`${styles.input} ${styles[size]} ${styles[variant]} ${
-          error ? styles.error : ""
-        }`}
+        placeholder={placeholder}
         disabled={disabled}
-        aria-disabled={disabled}
         aria-invalid={error}
+        className={`${styles.input} ${styles[variant]} ${styles[size]}`}
         {...props}
       />
       {label && <label className={styles.label}>{label}</label>}
-      {error && <span className={styles.errorText}>Invalid input</span>}
     </div>
   );
 };

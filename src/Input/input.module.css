@@ -1,86 +1,72 @@
 .wrapper {
   position: relative;
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  font-family: var(--ff-poppins);
+  --zure-color: black;
 }
 
-/* Base input style */
+/* Input */
 .input {
+  width: 100%;
   border-radius: 8px;
-  border: 2px solid #ccc;
-  padding: 1rem 0.8rem 0.5rem 0.8rem; /* extra top padding for label */
+  border: 1.5px solid #d1d5db;
+  padding: 0.6rem 0.8rem;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
   outline: none;
-  background: linear-gradient(145deg, #ffffff, #f3f3f3);
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus */
+.input:focus {
+  border-color: var(--zure-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--zure-color) 20%, transparent);
 }
 
 /* Floating label */
 .label {
   position: absolute;
-  left: 0.8rem;
-  top: 1rem;
-  font-size: 0.9rem;
-  color: #888;
+  left: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 0.25rem;
+  font-size: 0.75rem;
+  color: #6b7280;
   pointer-events: none;
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
 }
 
-/* When input is focused or has value */
+/* Float label */
 .input:focus + .label,
 .input:not(:placeholder-shown) + .label {
-  top: 0.2rem;
-  font-size: 0.75rem;
-  color: hsl(var(--primary));
+  top: -0.4rem;
+  font-size: 0.7rem;
+  color: var(--zure-color);
 }
 
 /* Variants */
 .default {
-  border-color: #ccc;
+  background: white;
 }
 
 .outline {
-  border: 1px solid black;
   background: transparent;
+  border: 1.5px solid var(--zure-color);
 }
 
 .ghost {
-  border: none;
   background: transparent;
-  box-shadow: none;
-}
-
-.danger {
-  border: 2px solid red;
-  box-shadow: red;
+  border: none;
+  border-bottom: 1.5px solid var(--zure-color);
+  border-radius: 0;
 }
 
 /* Sizes */
-.sm { padding: 0.6rem 0.8rem 0.3rem 0.8rem; font-size: 0.8rem; }
-.md { padding: 1rem 0.8rem 0.5rem 0.8rem; font-size: 0.9rem; }
-.lg { padding: 1.2rem 1rem 0.6rem 1rem; font-size: 1rem; }
+.sm { font-size: 0.8rem; padding: 0.4rem 0.6rem; }
+.md { font-size: 0.9rem; padding: 0.6rem 0.8rem; }
+.lg { font-size: 1rem; padding: 0.8rem 1rem; }
 
-/* States */
+/* Disabled */
 .input:disabled {
-  background: #f3f3f3;
+  opacity: 0.6;
   cursor: not-allowed;
-}
-
-.error {
-  border-color: red;
-}
-
-.errorText {
-  color: red;
-  font-size: 0.75rem;
-  margin-top: 0.2rem;
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-2px); }
-  to { opacity: 1; transform: translateY(0); }
 }
