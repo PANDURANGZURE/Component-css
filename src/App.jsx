@@ -14,12 +14,6 @@ import { Toast, toast } from "./Toast";
 function App() {
   return (
     <>
-      <Toast/>
-
-      <button onClick={() => toast.success("Error")}>
-        Show Toast
-      </button>
-      
       
     </>
   );
