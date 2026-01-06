@@ -2,25 +2,42 @@ import { useEffect, useState } from "react";
 
 let showToast;
 
-export function toast(message) {
-  if (showToast) showToast(message);
+function baseToast(message, variant = "default") {
+  if (showToast) showToast(message, variant);
 }
 
+
+export const toast = Object.assign(baseToast, {
+  success: (msg) => baseToast(msg, "success"),
+  error: (msg) => baseToast(msg, "error"),
+  warning: (msg) => baseToast(msg, "warning"),
+  info: (msg) => baseToast(msg, "info"),
+});
+
+const VARIANTS = {
+  default: { bg: "black", color: "white" },
+  success: { bg: "#16a34a", color: "white" },
+  error: { bg: "#dc2626", color: "white" },
+  warning: { bg: "#f59e0b", color: "black" },
+  info: { bg: "#2563eb", color: "white" },
+};
+
 export function Toast() {
-  const [msg, setMsg] = useState("");
+  const [toastData, setToastData] = useState(null);
 
   useEffect(() => {
-    showToast = (message) => {
-      setMsg(message);
+    showToast = (message, variant) => {
+      setToastData({ message, variant });
 
-      // Auto hide after 10 seconds
       setTimeout(() => {
-        setMsg("");
+        setToastData(null);
       }, 10000);
     };
   }, []);
 
-  if (!msg) return null;
+  if (!toastData) return null;
+
+  const { bg, color } = VARIANTS[toastData.variant] || VARIANTS.default;
 
   return (
     <div
@@ -28,8 +45,8 @@ export function Toast() {
         position: "fixed",
         top: 20,
         right: 20,
-        background: "black",
-        color: "white",
+        background: bg,
+        color,
         padding: "10px 12px",
         borderRadius: "6px",
         display: "inline-flex",
@@ -40,20 +57,17 @@ export function Toast() {
         whiteSpace: "nowrap",
       }}
     >
-      {/* Message */}
-      <span style={{ flex: 1 }}>{msg}</span>
+      <span style={{ flex: 1 }}>{toastData.message}</span>
 
-      {/* Close button at end */}
       <button
-        onClick={() => setMsg("")}
+        onClick={() => setToastData(null)}
         style={{
-          background: "black",
+          background: "transparent",
           border: "none",
-          color: "white",
+          color,
           fontSize: "14px",
           cursor: "pointer",
           padding: 0,
-          marginLeft: "4px",
         }}
         aria-label="Close toast"
       >

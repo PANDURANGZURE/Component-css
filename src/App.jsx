@@ -14,11 +14,13 @@ import { Toast, toast } from "./Toast";
 function App() {
   return (
     <>
-      <Toast varient="" />
+      <Toast/>
 
-      <button onClick={() => toast("Hello Toast")}>
+      <button onClick={() => toast.success("Error")}>
         Show Toast
       </button>
+      
+      
     </>
   );
 }
