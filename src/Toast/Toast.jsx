@@ -55,6 +55,7 @@ export function Toast() {
         fontSize: "14px",
         maxWidth: "300px",
         whiteSpace: "nowrap",
+        zIndex: 999,
       }}
     >
       <span style={{ flex: 1 }}>{toastData.message}</span>

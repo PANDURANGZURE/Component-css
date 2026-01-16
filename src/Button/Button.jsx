@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Change this to 'next/link' if using Next.js
+import { Link } from "react-router-dom";
 import styles from "./button.module.css";
 
 export const Button = ({
@@ -16,9 +16,6 @@ export const Button = ({
   ...props
 }) => {
   const isLink = Boolean(to);
-  
-  // Logic to determine which HTML tag to render
-  const Tag = isLink ? Link : "button";
 
   const customStyles = {
     ...style,
@@ -26,23 +23,30 @@ export const Button = ({
     color: color,
   };
 
-  const combinedClasses = [
-    styles.button,
-    styles[variant],
-    styles[size],
-    className
-  ].join(" ");
+  const combinedClasses = `${styles.button} ${styles[variant]} ${styles[size]} ${className}`;
+
+  // If it's a link → React Router Link, else → button
+  if (isLink) {
+    return (
+      <Link
+        to={to}
+        className={combinedClasses}
+        style={customStyles}
+        {...props}
+      >
+        {loading ? "Loading..." : children}
+      </Link>
+    );
+  }
 
   return (
-    <Tag
-      to={isLink ? to : undefined} // React Router uses 'to'
+    <button
       className={combinedClasses}
-      disabled={!isLink && (disabled || loading)}
-      aria-disabled={disabled || loading}
+      disabled={disabled || loading}
       style={customStyles}
       {...props}
     >
       {loading ? "Loading..." : children}
-    </Tag>
+    </button>
   );
 };

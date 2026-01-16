@@ -32,6 +32,12 @@
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--zure-color) 20%, transparent);
 }
 
+.select option {
+  color: #111;
+  background-color: white;
+}
+
+
 /* Floating label */
 .label {
   position: absolute;
