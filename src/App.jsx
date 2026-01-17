@@ -15,16 +15,17 @@ import { Skeleton, SkeletonCard, SkeletonText, SkeletonTable } from "./Skeleton"
 import { Badge, BadgeDot, BadgePill } from "./Badge";
 import { Link } from "react-router-dom";
 
-
 export default function App() {
-  
+
+  const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
+];
   return (
     <>
-     <Loader/>
-<Loader size="sm" />
-<Loader size="lg" color="green" />
-<Loader variant="dots" />
-<Loader variant="bar" color="#2563eb" />
+      <Testing/>
     </>
   );
 }
