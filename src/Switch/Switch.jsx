@@ -6,7 +6,7 @@ export const Switch = ({
   label,
   size = "md",
   variant = "solid",
-  color = "#22c55e",
+  color = "#000",
   disabled = false,
   className = "",
   ...props

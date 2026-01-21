@@ -1,31 +1,58 @@
-import React from 'react'
-import { useState , useEffect } from "react";
-import { Button } from './Button'
-import { Input } from './Input'
-import { Navbar } from './Navbar'
-import { Textarea } from './Textarea'
-import Testing from './page/Testing'
-import { Select } from './Select'
-import { Checkbox } from './Checkbox';
-import { Switch } from './Switch';
-import { Modal } from './Modal';
-import { Toast, toast } from "./Toast";
-import { Loader } from './Loaders';
-import { Skeleton, SkeletonCard, SkeletonText, SkeletonTable } from "./Skeleton";
-import { Badge, BadgeDot, BadgePill } from "./Badge";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Switch } from "./Switch";
 
-export default function App() {
+export default function SwitchSizes() {
+  const [sm, setSm] = useState(false);
+  const [md, setMd] = useState(true);
+  const [lg, setLg] = useState(false);
 
-  const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Contact", href: "/contact" },
-];
   return (
     <>
-      <Testing/>
+    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+      <Switch
+       varient="outline"
+        checked={sm}
+        onChange={(e) => setSm(e.target.checked)}
+      />
+
+      <Switch
+        size="md"
+        label="Medium"
+        checked={md}
+        onChange={(e) => setMd(e.target.checked)}
+      />
+
+      <Switch
+        size="lg"
+        label="Large"
+        checked={lg}
+        onChange={(e) => setLg(e.target.checked)}
+      />
+    </div>
+    {/* size */}
+    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+      <Switch
+        size="sm"
+        label="Small"
+        checked={sm}
+        onChange={(e) => setSm(e.target.checked)}
+      />
+
+      <Switch
+        size="md"
+        label="Medium"
+        checked={md}
+        onChange={(e) => setMd(e.target.checked)}
+      />
+
+      <Switch
+        size="lg"
+        label="Large"
+        checked={lg}
+        onChange={(e) => setLg(e.target.checked)}
+      />
+    </div>
+    
     </>
   );
 }
