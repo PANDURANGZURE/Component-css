@@ -1,7 +1,4 @@
-
-import Skeleton from "./Skeleton";
-import SkeletonText from "./SkeletonText";
-import SkeletonCard from "./SkeletonCard";
-import SkeletonTable from "./SkeletonTable";
-
-export { Skeleton, SkeletonText, SkeletonCard, SkeletonTable };
+export { default as Skeleton } from "./Skeleton.jsx";
+export { default as SkeletonText } from "./SkeletonText.jsx";
+export { default as SkeletonCard } from "./SkeletonCard.jsx";
+export { default as SkeletonTable } from "./SkeletonTable.jsx";

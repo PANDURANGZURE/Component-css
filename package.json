@@ -1,9 +1,10 @@
 {
   "name": "@pandurang-zure/zure-ui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Reusable UI components",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "module": "dist/index.js",
+  "style": "dist/index.css",
   "type": "module",
   "files": [
     "dist"
