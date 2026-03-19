@@ -43,5 +43,3 @@ export const Select = ({
     </div>
   );
 };
-
-export default Select;

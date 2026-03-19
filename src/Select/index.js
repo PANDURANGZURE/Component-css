@@ -1,1 +1,1 @@
-export {default as Select } from "./Select.jsx";
+export { Select } from "./Select.jsx";

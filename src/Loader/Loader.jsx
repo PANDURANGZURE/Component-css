@@ -82,5 +82,3 @@ function BarLoader({ color }) {
     </div>
   );
 }
-
-export default Loader;

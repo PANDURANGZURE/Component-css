@@ -34,5 +34,3 @@ export const Textarea = ({
     </div>
   );
 };
-
-export default Textarea;
