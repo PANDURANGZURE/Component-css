@@ -1,16 +1,52 @@
-# React + Vite
+# Introduction to Zure UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A modular UI component library designed for developers who want a balance between speed and complete source code control.**
 
-Currently, two official plugins are available:
+Zure UI is built with **React** and **Plain CSS**, ensuring your components are lightweight, accessible, and easy to customize. We also provide **Next.js** optimized code for seamless integration into modern web apps.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Why Choose Zure UI?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Unlike traditional UI libraries that hide logic inside `node_modules`, we offer two distinct ways to work:
 
-## Expanding the ESLint configuration
+### 1. Install Through NPM
+Install the package using npm for quick setup and easy updates.
+[View full NPM installation →](/docs/installation/npm)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Manual Method (Copy-Paste)
+Copy `.jsx`, `.module.css` & `index.js` files directly into your project. This gives you 100% ownership of the code.
+[View full manual installation →](/docs/installation/manual)
+
+---
+
+## Core Principles
+
+### 🛡️ Zero Side Effects
+Every component is isolated. Importing a `Button` won’t bloat your app with styles for a `Table` you aren’t using.
+
+### 🎨 Standard CSS
+We use raw `.module.css` files. No complex CSS-in-JS libraries or heavy pre-processors required. If you know CSS, you can theme this library in seconds.
+
+### ♿ Accessible by Default
+We follow WAI-ARIA patterns to ensure your application is usable by everyone, right out of the box.
+
+---
+
+## Project Philosophy
+
+> "The best UI library is the one that disappears into your project."
+
+Most libraries become a burden as your project grows because they are hard to customize. By providing the **Manual Installation** option, we ensure that if you need to change a core behavior, you can just edit the file—no "wrapper" or "hacks" required.
+
+---
+
+## Getting Started
+
+Ready to build? Choose your path:
+
+| Path | Description | Link |
+| :--- | :--- | :--- |
+| **Package** | I want to install the package | [NPM Guide](/docs/installation/npm) |
+| **Source** | I want to copy the source code | [Manual Guide](/docs/installation/manual) |
+| **Explore** | Browse the components | [Component Gallery](/docs/components/button) |

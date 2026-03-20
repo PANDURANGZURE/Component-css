@@ -1,4 +1,4 @@
-import styles from "./input.module.css";
+import "./input.css";
 
 export const Input = ({
   label,
