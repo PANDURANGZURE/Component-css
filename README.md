@@ -12,11 +12,11 @@ Unlike traditional UI libraries that hide logic inside `node_modules`, we offer 
 
 ### 1. Install Through NPM
 Install the package using npm for quick setup and easy updates.
-[View full NPM installation →](/docs/installation/npm)
+[View full NPM installation →](https://zure-ui.vercel.app/Documentation/Installation#npm)
 
 ### 2. Manual Method (Copy-Paste)
 Copy `.jsx`, `.module.css` & `index.js` files directly into your project. This gives you 100% ownership of the code.
-[View full manual installation →](/docs/installation/manual)
+[View full manual installation →](https://zure-ui.vercel.app/Documentation/Installation#manual)
 
 ---
 
