@@ -47,6 +47,6 @@ Ready to build? Choose your path:
 
 | Path | Description | Link |
 | :--- | :--- | :--- |
-| **Package** | I want to install the package | [NPM Guide](/docs/installation/npm) |
-| **Source** | I want to copy the source code | [Manual Guide](/docs/installation/manual) |
-| **Explore** | Browse the components | [Component Gallery](/docs/components/button) |
+| **Package** | I want to install the package | [NPM Guide](https://zure-ui.vercel.app/Documentation/Installation#npm) |
+| **Source** | I want to copy the source code | [Manual Guide](https://zure-ui.vercel.app/Documentation/Installation#manual) |
+| **Explore** | Browse the components | [Component Gallery](https://zure-ui.vercel.app/Components/Button) |
